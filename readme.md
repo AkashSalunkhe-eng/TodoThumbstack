@@ -1,7 +1,5 @@
 ## Todo App
 
-![Complete Task List with Pagination](assets/images/task_list.png "Task List")
-
 **Todo App** is a simple but reliable application which keep the user tasks intact, with their status, Marking the status if task is completed or passed due date. Added delete task Functionality to clean the task list once completed. Search and filter functionality is added for better User Experience.
 
 **Key Features:**
@@ -65,6 +63,14 @@
 
 **Consideration after start:**
 If you are starting FE and BE individually make sure to copy the env keys and start the application. Once started access the application from that hosted ports itself.
+
+
+![Complete Task List with Pagination](assets/images/task_list.png "Task List");
+![Complete Task filter added](assets/images/completed_tasks.png "Completed Tasks Filter List");
+![Due Date Passed tasks filter added](assets/images/due_date_passed_tasks.png "Due Date Passed tasks filter List");
+![Search feature of task](assets/images/search_tasks.png "Search feature of task");
+![Date Picker](assets/images/date_picker_tasks.png "Date and time Picker");
+![Toaster](assets/images/toaster_tasks.png "Toaster Tasks");
 
 **Contribution:**
 
