@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./todo-app
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:5055/api
+
+  backend:
+    build:
+      context: ./TodoThumbstackBackend
+      dockerfile: Dockerfile
+    ports:
+      - "5055:5055"
+    environment:
+      PORT: 5055
+      MONGO_URI: mongodb+srv://salunkheakash008:84r1dxDgUgdAsGGu@cluster0.i0tja.mongodb.net/Thumbstack-Todo
+    depends_on:
+      - db
+
+  db:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

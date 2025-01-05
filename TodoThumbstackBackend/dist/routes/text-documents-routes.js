@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const text_document_controller_1 = require("../controller/text-document-controller");
+const router = (0, express_1.Router)();
+router.post("/upload-text-document", text_document_controller_1.uploadTextDocument);
+router.get("/get-document-content/:filename", text_document_controller_1.getSpecificDocumentWIthFilename);
+router.get("/get-all-documents-data/", text_document_controller_1.getAllDocumentData);
+router.delete('/delete-document/:filename', text_document_controller_1.deleteSpecificDcoumentWithFilename);
+exports.default = router;
